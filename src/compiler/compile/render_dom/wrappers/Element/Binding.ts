@@ -328,8 +328,8 @@ function get_value_from_dom(
 		return x`this.__value`;
 	}
 
-	// <input type='range|number' bind:value>
-	if (type === 'range' || type === 'number') {
+	// <input type='range' bind:value>
+	if (type === 'range') {
 		return x`@to_number(this.${name})`;
 	}
 
